@@ -1,6 +1,7 @@
-import { IProduct } from './../../models/interfaces';
 import { Component, Input, OnInit } from '@angular/core';
-import { StorageService } from 'src/app/storage.service';
+
+import { IProduct } from './../../models/interfaces';
+import { CartStorageService } from 'src/app/cart-storage.service';
 
 @Component({
   selector: 'app-product-item',
@@ -16,14 +17,12 @@ export class ProductItemComponent implements OnInit {
     price: 0,
     imgUrl: '',
   };
-  // cartProducts: IProduct[] = [];
 
-  constructor(private storageService: StorageService) {}
+  constructor(private cartStorageService: CartStorageService) {}
 
   ngOnInit(): void {}
 
   addToCart(product: IProduct): void {
-    console.log(product);
-    this.storageService.set('cartProducts', product);
+    this.cartStorageService.set('cartProducts', product);
   }
 }
