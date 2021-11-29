@@ -1,3 +1,7 @@
+# Carrinho de Compras - Santander Coders
+
+Projeto realizado em Angular proposto no curso Santander Coders | Web Full-Stack Degree realizado na [Let's Code](https://www.letscode.com.br/).
+
 # AngularShoppingCart
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.0.
